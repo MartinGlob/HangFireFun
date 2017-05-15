@@ -1,0 +1,20 @@
+﻿
+Tasks
+	task_a	
+		app1.exe -123 -a -b
+	task_b	
+		app1.exe -000 -c -d
+	task_c   
+		app2.exe -data -test
+
+job_1
+	
+	05:00			
+		task_a	waituntildone
+	08:00-19:00		
+		task_b	interval 30
+
+job_2
+	allday
+		task_c	interval 60
+
